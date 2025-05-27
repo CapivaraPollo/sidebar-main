@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <link rel="shortcut icon" type="image/png" href="/src/images/bpm.png" />
+  <title>Calculadora Penal | 1° BPM-AV</title>
+</head>
+
+<body>
+  <nav id="sidebar">
+    <div id="sidebar_content">
+      <div id="user">
+        <img src="src/images/bpm.png" id="user_avatar" alt="Avatar" />
+        <p id="user_infos">
+          <span class="item-description">1° BPM-AV</span>
+          <span class="item-description">Manuais</span>
+        </p>
+      </div>
+
+      <ul id="side_items">
+        <li class="side-item active">
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+            <span class="item-description">BEM VINDO</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="pcd.html">
+            <span class="menu-icon"><img src="/src/images/pcd.png" width="18" alt="MAN" /></span>
+            <span class="item-description">PCD - Pessoa com Deficiência</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="abordagem.html">
+            <i class="fa-solid fa-people-arrows"></i>
+            <span class="item-description">Abordagem</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="acompanhamento.html">
+            <i class="fa-solid fa-car"></i>
+            <span class="item-description">Acompanhamento</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="comunicacao.html">
+            <i class="fa-solid fa-comments"></i>
+            <span class="item-description">Comunicação Operacional</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="qths.html">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span class="item-description">Manual de QTH's</span>
+          </a>
+        </li>
+        <li class="side-item">
+          <a href="calculadora.html">
+            <i class="fa-solid fa-building-shield"></i>
+            <span class="item-description">Calculadora Penal</span>
+          </a>
+        </li>
+      </ul>
+
+      <button id="open_btn" aria-label="Abrir/Fechar menu lateral">
+        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+      <!-- HEADER COM LOGO -->
+      <header class="header-logo">
+        <img src="src/images/headercelas.png" alt="Logo do 1º BPM-AV" />
+      </header>
+
+      <!-- EXPLICAÇÕES DO MANUAL -->
+      <section class="calculadora">
+        <h1><i class="fa-solid fa-calculator"></i> CALCULADORA PENAL</h1>
+        <br>
+        <div class="info-box">
+          <h2>Mínimas Fixas do Tablet:</h2>
+          <ul>
+            <li>Posse de Ferramentas Ilícitas: 10 meses</li>
+            <li>Tráfico de Entorpecentes: 15 meses</li>
+            <li>Posse de Munição Ilegal: 15 meses</li>
+            <li>Posse de Dinheiro Ilícito: 10 meses</li>
+            <li>Receptação de Produtos Roubados: 10 meses</li>
+            <li>Multas Pendentes: 10 meses</li>
+          </ul>
+        </div>
+
+        <form id="pena-form">
+          <label>Posse de Ferramentas Ilícitas</label>
+          <input type="number" id="ferramentas" min="0" value="0" />
+
+          <label>Tráfico de Entorpecentes</label>
+          <input type="number" id="entorpecentes" min="0" value="0" />
+
+          <label>Posse de Munição Ilegal</label>
+          <input type="number" id="municao" min="0" value="0" />
+
+          <label>Posse de Dinheiro Ilícito</label>
+          <input type="number" id="dinheiro" min="0" value="0" />
+
+          <label>Receptação de Produtos Roubados</label>
+          <input type="number" id="produtos" min="0" value="0" />
+
+          <label>Multas Pendentes</label>
+          <input type="number" id="multas" min="0" value="0" />
+
+          <div class="botoes-calculadora">
+            <button type="button" class="btn-calcular" onclick="calcularPena()">Calcular Pena</button>
+            <button type="reset" class="btn-zerar">Zerar</button>
+          </div>
+
+
+          <div id="resultado-detalhado" class="resultado-detalhado" style="display: none;">
+            <h3>Resultado do Cálculo</h3>
+            <p class="explicacao"><strong>Pena = Mínima + Cálculo dos Itens</strong></p>
+            <div id="itens-calculo"></div>
+            <p class="total"><strong>Pena Total:</strong> <span id="pena-total"></span></p>
+          </div>
+  </main>
+
+  <div class="credit-container">
+    <div class="credit-button">©</div>
+    <div class="credit-box">
+      <p><b>Dev:</b> Sd. 1ª Adeusa Dokasi Void</p>
+      <p><b>Fotos:</b> Cb. Leonardo C. Ferreira</p>
+      <br>
+      <p><b>Crédito:</b> Matheus Pellegrini</p>
+    </div>
+  </div>
+
+  <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
