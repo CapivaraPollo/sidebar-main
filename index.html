@@ -9,7 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="src/css/styles.css" />
   <link rel="shortcut icon" type="image/png" href="/src/images/bpm.png" />
-  <title>BEM-VINDOS | 1° BPM-AV</title>
+  <title>BEM-VINDOS | 1° BPM-AP</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       <div id="user">
         <img src="src/images/bpm.png" id="user_avatar" alt="Avatar" />
         <p id="user_infos">
-          <span class="item-description">1° BPM-AV</span>
+          <span class="item-description">1° BPM-AP</span>
           <span class="item-description">Manuais</span>
         </p>
       </div>
@@ -83,24 +83,20 @@
 
       <!-- EXPLICAÇÕES DO MANUAL -->
       <section class="manual-box manual-explicacao">
-        <h1>MANUAIS DO 1°BPM-AV</h1>
+        <h1>MANUAIS DO 1°BPM-AP</h1>
         <p>
-          Seja muito bem-vindo ao Batalhão de Polícia Militar do Alta Valley!
+          Seja muito bem-vindo ao Batalhão de Polícia Militar do Alta Paradise!
         </p>
         <p>
-          Aqui você irá encontrar
-          <span class="highlight-pr bold">todos os materiais</span> do
-          batalhão, esses materiais possuem o intuito de instruí-los para que
-          possam realizar os procedimentos do batalhão no nosso padrão e
-          excelência, para que nosso batalhão mantenha o alto padrão em nossas
-          modulações, abordagens e acompanhamentos.
-        </p>
-        <p>
-          Após terminarem os cursos básicos e obrigatórios, será esperado e
-          cobrado a execução plena e adequada de todos os conteúdos abordados
-          nesta apostila.
-          <b>Uma vez que o curso foi registrado na planilha</b>,
-          <span class="highlight-pr bold">a falha no procedimento está sujeita a punições</span>.
+          Aqui você encontrará <span class="highlight-pr bold">todos os materiais oficiais</span> do batalhão. Esses
+          conteúdos foram elaborados com o objetivo de instruí-lo sobre os procedimentos operacionais adotados,
+          assegurando que todas as ações sigam o padrão de excelência do 1º BPM-AP — especialmente nas modulações,
+          abordagens e acompanhamentos.
+
+          Após a conclusão dos cursos básicos e obrigatórios, será exigida a aplicação correta e completa de todos os
+          conhecimentos apresentados nesta apostila.
+          <b>Uma vez registrado o curso na planilha</b>, <span class="highlight-pr bold">o descumprimento dos
+            procedimentos poderá resultar em punições</span>.
         </p>
 
         <ul class="manual-links">
@@ -134,6 +130,24 @@
       <p><b>Crédito:</b> Matheus Pellegrini</p>
     </div>
   </div>
+  <button id="toggle-dark" style="position: fixed; bottom: 20px; left: 20px; z-index: 999;">🌓</button>
+<script>
+  const toggle = document.getElementById('toggle-dark');
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+    const isDark = document.documentElement.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  });
+</script>
+
+
 
   <script src="src/javascript/script.js"></script>
 </body>
