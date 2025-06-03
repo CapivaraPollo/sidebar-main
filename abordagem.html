@@ -9,7 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="src/css/styles.css" />
   <link rel="shortcut icon" type="image/png" href="/src/images/bpm.png" />
-  <title>Abordagem | 1° BPM-AV</title>
+  <title>Abordagem | 1° BPM-AP</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       <div id="user">
         <img src="src/images/bpm.png" id="user_avatar" alt="Avatar" />
         <p id="user_infos">
-          <span class="item-description">1° BPM-AV</span>
+          <span class="item-description">1° BPM-AP</span>
           <span class="item-description">Manuais</span>
         </p>
       </div>
@@ -85,8 +85,9 @@
       <section class="manual-abordagem">
         <h1>MANUAL DE ABORDAGEM</h1>
         <p>
-          Este material foi elaborado como apoio aos oficiais do 1º BPM-AV, com o objetivo de padronizar e orientar
-          sobre os principais aspectos relacionados à abordagem.
+          Este material foi desenvolvido para servir como guia de apoio aos oficiais do 1º BPM-AP, com a finalidade de
+          padronizar procedimentos e fornecer orientações claras sobre os principais aspectos envolvidos nas abordagens
+          policiais.
         </p>
       </section>
       <br>
@@ -98,7 +99,7 @@
 
         <hr class="divisoria">
         <h2 class="subtitulo">PROCEDIMENTO DE ABORDAGEM</h2>
-        <p>No Alta Valley, o Policial Militar possui autoridade legal para realizar abordagens a qualquer cidadão,
+        <p>No Alta Paradise, o Policial Militar possui autoridade legal para realizar abordagens a qualquer cidadão,
           sempre que houver um motivo plausível. Isso inclui desde verificações de segurança e integridade, abordagens
           de trânsito por infrações, ações de caráter instrutivo, até situações em que exista fundada suspeita ou
           flagrante delito.</p>
@@ -410,10 +411,11 @@
             <table class="tabela-comandos">
               <thead>
                 <tr>
-                  <th>Comando</th>
-                  <th>Ação</th>
+                  <th>COMANDO</th>
+                  <th>AÇÃO</th>
                 </tr>
               </thead>
+
               <tbody>
                 <tr>
                   <td class="comando q">Q</td>
@@ -622,7 +624,7 @@
                 <p>
                 <div class="imageInLine">
                   <img src="/src/images/aluno.png" width="15" alt="Imagem de um Aluno" />
-                </div><i>"Sou o Cadete José do 1°BPM Alta Valley"</i>
+                </div><i>"Sou o Cadete José do 1°BPM Alta Paradise"</i>
                 </p>
               </div>
               <div id="contextualizacao" class="tab-content" tab-group="funcAB1">
@@ -811,7 +813,8 @@
             <p>Nessas situações, ao ordenar que o abordado saia do veículo, ele deve ser algemado <b>IMEDIATAMENTE</b>,
               devido ao risco elevado.</p>
 
-            <p>O limite inicial são 3 unidades de apoio, podendo ser ampliado caso a <b>G.O.T</b> julgue necessário e seja identificado que o risco é maior que o previsto. O
+            <p>O limite inicial são 3 unidades de apoio, podendo ser ampliado caso a <b>G.O.T</b> julgue necessário e
+              seja identificado que o risco é maior que o previsto. O
               posicionamento segue o padrão <i>felony</i> (em leque), com as viaturas alinhadas lado a lado atrás do
               veículo abordado.</p>
 
@@ -832,7 +835,7 @@
               </div>
             </div>
 
-            </section>
+        </section>
       </section>
     </div>
     </div>
@@ -889,6 +892,22 @@
     });
   </script>
 
+  <button id="toggle-dark" style="position: fixed; bottom: 20px; left: 20px; z-index: 999;">🌓</button>
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    });
+  </script>
 
   <script src="src/javascript/script.js"></script>
 </body>
