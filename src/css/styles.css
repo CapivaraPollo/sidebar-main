@@ -1425,6 +1425,19 @@ input[type="number"] {
   transition: background-color 0.3s;
 }
 
+#toggle-dark {
+  all: unset; /* remove todos os estilos padrões */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  font-size: 18px; /* tamanho do emoji */
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+
 .credit-button:hover {
   background-color: var(--box-bg);
 }
