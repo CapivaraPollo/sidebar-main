@@ -1,3 +1,25 @@
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --text: #000000;
+  --highlight: #000000;
+  --box-bg: #fff;
+  --box-border: #ccc;
+  --hover: #cfcfcf;
+}
+
+.dark-mode {
+  --bg: #121212;
+  --bg-soft: #1e1e1e;
+  --text: #f0f0f0;
+  --highlight: #d6d6d6;
+  --box-bg: #1a1a1a;
+  --box-border: #333;
+  --hover: #2a2a2a;
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
@@ -10,7 +32,7 @@
 
 body {
   display: flex;
-  background-color: #fafafa;
+  background-color: var(--bg-soft);
   min-height: 100vh;
   user-select: none;
   -webkit-user-select: none;
@@ -24,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fafafa;
+  background-color: var(--bg-soft);
   height: 100vh;
   border-radius: 0px 18px 18px 0px;
   position: relative;
@@ -81,7 +103,7 @@ body {
 }
 
 .side-item.active {
-  background-color: #000000;
+  background-color: var(--highlight);
 }
 
 .side-item:hover:not(.active),
@@ -94,11 +116,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
+  color: var(--highlight);
 }
 
 .side-item.active a {
-  color: #ffffff;
+  color: var(--bg);
 }
 
 .side-item a i {
@@ -113,8 +135,8 @@ body {
   position: absolute;
   top: 30px;
   right: -10px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--highlight);
+  color: var(--bg);
   border-radius: 100%;
   width: 20px;
   height: 20px;
@@ -208,13 +230,13 @@ main,
 .divisoria {
   border: none;
   height: 2px;
-  background-color: #ebebeb; /* cor da linha */
+  background-color: var(--box-border); /* cor da linha */
   margin: 30px 0; /* espaçamento antes e depois */
   width: 100%; /* ocupa toda a largura da box */
 }
 
 .paragrafo-destaque {
-  background-color: #fdf4f4;
+  background-color: var(--box-bg);
   border-left: 4px solid #cc0000;
   padding: 15px 20px;
   margin: 20px 0;
@@ -224,9 +246,10 @@ main,
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   font-family: Calibri, sans-serif;
   line-height: 1.6;
+  
 }
 .paragrafo-destaque-fem {
-  background-color: #fdf4fc;
+  background-color: var(--box-bg);
   border-left: 4px solid #be049f;
   padding: 15px 20px;
   margin: 20px 0;
@@ -247,9 +270,9 @@ main,
   font-weight: bold;
 }
 .paragrafo-destaque {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   padding: 15px 20px;
-  border-left: 4px solid #000000;
+  border-left: 4px solid var(--highlight);
   margin-bottom: 20px;
   border-radius: 8px;
   font-size: 12pt;
@@ -260,19 +283,19 @@ main,
 
 .calculadora {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 50px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 15px;
   line-height: 1.6;
-  color: #000000;
+  color: var(--highlight);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .calculadora h1 {
   font-size: 20px;
-  color: #1a202c;
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,13 +311,13 @@ main,
 
 .manual-explicacao {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #000000;
+  color: var(--highlight);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -306,7 +329,7 @@ main,
 .manual-explicacao p {
   font-size: 15px;
   line-height: 1.6;
-  color: #000000;
+  color: var(--highlight);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
 }
 
@@ -330,8 +353,8 @@ main,
   gap: 10px;
   width: 100%;
   padding: 12px 24px;
-  background-color: #f0f0f0; /* fundo mais claro */
-  color: #000;
+  background-color: var(--hover); /* fundo mais claro */
+  color: var(--text);
   text-decoration: none;
   border-radius: 8px;
   font-size: 11px;
@@ -349,22 +372,22 @@ main,
 }
 
 .manual-links li a:hover {
-  background-color: #000000; /* hover um pouco mais escuro */
+  background-color: var(--highlight); /* hover um pouco mais escuro */
   transform: translateY(-2px);
-  color: #ccc;
+  color: var(--box-border);
 }
 
 /* Abordagem */
 
 .manual-abordagem {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -376,19 +399,19 @@ main,
 .manual-abordagem p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
 }
 
 .manual-ab {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -396,12 +419,14 @@ main,
   text-align: center;
   margin-bottom: 15px;
   font-size: 1.6rem;
+  color: var(--text);
 }
 .manual-ab p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
+  color: var(--text);
 }
 
 /* subtítulos */
@@ -413,10 +438,11 @@ main,
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 20px;
-  color: #000000;
+  color: var(--highlight);
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--text);
 }
 .subtitulo-fem {
   font-size: 15pt; /* ou 0.75rem ou 12px, conforme preferir */
@@ -461,7 +487,7 @@ main,
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 20px;
-  color: #000000;
+  color: var(--highlight);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -499,6 +525,7 @@ main,
   margin-left: auto;
   margin-right: auto;
   font-family: "Calibri", sans-serif;
+  color: var(--text);
 }
 
 .accordion-section {
@@ -506,6 +533,7 @@ main,
   flex-direction: column;
   gap: 10px;
   margin-top: 30px;
+  color: var(--text);
 }
 
 /* Mantém estilo de botão */
@@ -514,7 +542,7 @@ main,
   text-align: left;
   cursor: pointer;
   border: none;
-  background-color: #f1f1f1;
+  background-color: var(--box-bg);
   padding: 10px 20px;
   font-size: 11pt;
   border-radius: 8px;
@@ -523,21 +551,25 @@ main,
   align-items: center;
   gap: 10px;
   margin-bottom: 5px;
+  color: var(--text);
 }
 
 .accordion-btn:hover {
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--highlight);
+  color: var(--box-bg);
+  
 }
 
 .accordion-content {
   display: none;
-  background-color: #fff;
-  border-left: 5px solid #000000;
+  background-color: var(--box-bg);
+  border-left: 5px solid var(--highlight);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 12pt;
   line-height: 1.6;
+  color: var(--text);
+  
 }
 
 /* listas */
@@ -565,7 +597,7 @@ main,
 
 .lista-explicativa li {
   margin-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: var(--box-bg);
   padding: 12px 15px;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
@@ -623,7 +655,7 @@ main,
 .image-description {
   font-size: 10pt;
   font-family: Calibri, sans-serif;
-  color: #333;
+  color: var(--text);
   margin-top: 5px;
   text-align: center; /* Alinha o texto da legenda */
   font-style: italic;
@@ -638,8 +670,8 @@ main,
 /* quotes */
 
 .caixa-quote {
-  background-color: #f9f9f9;
-  border-left: 5px solid #000000;
+  background-color: var(--box-bg);
+  border-left: 5px solid var(--highlight);
   padding: 15px 20px;
   margin: 20px 0;
   border-radius: 10px;
@@ -647,9 +679,10 @@ main,
   font-size: 11pt;
   text-align: justify;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  color: var(--text);
 }
 .caixa-quote-fem {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #be049f;
   padding: 15px 20px;
   margin: 20px 0;
@@ -658,9 +691,10 @@ main,
   font-size: 11pt;
   text-align: justify;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  color: var(--text);
 }
 .caixa-quote-ac {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #ffd000;
   padding: 15px 20px;
   margin: 20px 0;
@@ -671,7 +705,7 @@ main,
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .caixa-quote-ac3 {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #3f0072;
   padding: 15px 20px;
   margin: 20px 0;
@@ -682,7 +716,7 @@ main,
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .caixa-quote-ab {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #9c2601;
   padding: 15px 20px;
   margin: 20px 0;
@@ -693,7 +727,7 @@ main,
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .caixa-quote-pcd {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #0c6b00;
   padding: 15px 20px;
   margin: 20px 0;
@@ -704,7 +738,7 @@ main,
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 .caixa-quote-co {
-  background-color: #f9f9f9;
+  background-color: var(--box-bg);
   border-left: 5px solid #009b00;
   padding: 15px 20px;
   margin: 20px 0;
@@ -716,7 +750,7 @@ main,
 }
 .caixa-quote code,
 .caixa-quote kbd {
-  background-color: #e6e6e6;
+  background-color: var(--box-bg);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 10pt;
@@ -726,13 +760,14 @@ main,
 /* blocos de obs/alertas */
 
 .bloco-observacao {
-  background-color: #fff3f3;
+  background-color: var(--box-bg)3f3;
   border-left: 4px solid #cc0000;
   padding: 12px 16px;
   margin: 20px 0;
   border-radius: 10px;
   font-size: 11.5pt;
   text-align: justify;
+  color: var(--text);
 }
 .bloco-observacao2 {
   border-left: 4px solid #f5d000;
@@ -741,6 +776,7 @@ main,
   border-radius: 10px;
   font-size: 11.5pt;
   text-align: justify;
+  color: var(--text);
 }
 .bloco-observacao3 {
   border-left: 4px solid #009b00;
@@ -749,15 +785,17 @@ main,
   border-radius: 10px;
   font-size: 11.5pt;
   text-align: justify;
+  color: var(--text);
 }
 .alert {
-  background-color: #fdf0f0;
+  background-color: var(--box-bg);
   border-radius: 6px;
   padding: 10px 15px;
-  color: #333;
+  color: var(--text);
   font-family: Arial, sans-serif;
   font-size: 15px;
   max-width: 100%;
+  color: var(--text);
 }
 
 .alert-tag {
@@ -768,11 +806,12 @@ main,
   border-radius: 15px;
   font-size: 15px;
   margin-bottom: 8px;
+  
 }
 .alert2 {
   border-radius: 6px;
   padding: 10px 15px;
-  color: #333;
+  color: var(--text);
   font-family: Arial, sans-serif;
   font-size: 15px;
   max-width: 100%;
@@ -802,6 +841,7 @@ main,
   max-width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  color: var(--text);
 }
 
 /* tabelas */
@@ -811,26 +851,31 @@ main,
   border-collapse: collapse;
   margin: 10px 0;
   font-size: 14px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--box-bg);
+  border: 1px solid var(--box-border);
+  color: var(--text);
 }
 
 .tabela-itens th,
 .tabela-itens td {
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 5px;
   vertical-align: CENTER;
   text-align: center;
+  color: var(--text);
+  background-color: var(--box-bg);
 }
 
 .tabela-itens th {
-  background-color: #f5f5f5;
+  background-color: var(--box-bg);
   text-align: center;
   font-size: 16px;
+  color: var(--text);
 }
 
 .tabela-itens em {
-  color: #000000;
+  color: var(--highlight);
+  
 }
 
 .tabela-itens .obs {
@@ -856,17 +901,19 @@ main,
 .tab-container {
   width: 100%;
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   border-radius: 8px;
-  background-color: #fefefe;
+  background-color: var(--box-bg);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--text);
 }
 
 .tabs {
   display: flex;
-  border-bottom: 1px solid #ccc;
-  background-color: #f5f5f5;
+  border-bottom: 1px solid var(--box-border);
+  background-color: var(--box-bg);
   border-radius: 8px 8px 0 0;
+  color: var(--text);
 }
 
 .tab {
@@ -879,16 +926,18 @@ main,
   transition: background 0.3s;
   font-weight: 600;
   text-align: center;
+  color: var(--text);
 }
 
 .tab:hover {
-  background-color: #e6e6e6;
+  background-color: var(--box-bg);
 }
 
 .tab.active {
-  background-color: white;
+  background-color: var(--box-bg);
   border-bottom: 2px solid #0077cc;
   color: #0077cc;
+  color: var(--text);
 }
 
 .boardContent {
@@ -898,6 +947,7 @@ main,
 .tab-content {
   display: none;
   animation: fadeIn 0.3s ease-in-out;
+  color: var(--text);
 }
 
 .tab-content.active {
@@ -908,32 +958,32 @@ main,
   max-width: 900px;
   margin: auto; /* centraliza horizontalmente */
   overflow-x: auto;
+  background-color: var(--box-bg);
 }
 
 .tabela-comandos {
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: white;
+  background-color: var(--box-bg);
+  color: var(--text);
 }
 
 .tabela-comandos th,
 .tabela-comandos td {
-  border: 2px solid #000;
+  border: 2px solid var(--text);
   padding: 5px;
   text-align: center;
+  color: var(--text);
 }
 
-.tabela-comandos th {
-  background-color: #000000;
-  color: white;
-  font-size: 1.1em;
-}
+
 
 .comando {
   font-weight: bold;
-  color: #000;
+  color: var(--text);
   text-align: center;
+  
 }
 
 /* Cores dos comandos */
@@ -965,6 +1015,7 @@ main,
   .tabela-comandos td {
     font-size: 0.9em;
     padding: 10px;
+    
   }
 
   .tabela-comandos th {
@@ -985,13 +1036,13 @@ main,
 
 .manual-pcd {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -1003,7 +1054,7 @@ main,
 .manual-pcd p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
 }
 
@@ -1011,13 +1062,13 @@ main,
 
 .manual-qths {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -1029,7 +1080,7 @@ main,
 .manual-qths p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
 }
 
@@ -1037,13 +1088,13 @@ main,
 
 .manual-comunicacao {
   text-align: justify;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   padding: 20px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--box-bg);
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -1055,7 +1106,7 @@ main,
 .manual-comunicacao p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   margin-bottom: 10px; /* espaçamento maior entre parágrafos */
 }
 .highlight-TB {
@@ -1064,7 +1115,7 @@ main,
 }
 .flow h2 {
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text);
   font-size: 1.3rem;
 }
 
@@ -1076,8 +1127,8 @@ main,
 }
 
 .node {
-  background: #ffffff;
-  color: #000000;
+  background: var(--bg);
+  color: var(--highlight);
   padding: 12px 10px;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -1089,7 +1140,7 @@ main,
 
 .node:hover {
   transform: translateY(-3px);
-  background: #fffce3;
+  background: var(--box-bg)ce3;
 }
 
 .arrow {
@@ -1128,14 +1179,14 @@ table {
 
 th,
 td {
-  border: 1px solid #000000;
+  border: 1px solid var(--highlight);
   padding: 3px;
   text-align: center;
   vertical-align: middle;
 }
 
 th {
-  background-color: #222;
+  background-color: var(--box-bg);
   color: white;
 }
 
@@ -1152,7 +1203,7 @@ th {
 }
 
 .white {
-  background-color: #ffffff;
+  background-color: var(--bg);
 }
 
 table.legenda {
@@ -1200,8 +1251,8 @@ table.codigo-situacao {
 }
 
 .codigo-situacao thead th {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--highlight);
+  color: var(--bg);
   font-size: 15px;
 }
 
@@ -1214,7 +1265,7 @@ tr.blue {
 }
 
 tr.yellow {
-  background-color: #ffff33;
+  background-color: var(--box-bg)f33;
 }
 
 tr.orange {
@@ -1232,11 +1283,12 @@ tr.red {
 /*------*/
 
 .info-box {
-  background-color: #f1f5f9;
+  background-color: var(--box-bg);
   border-left: 3px solid #004fab;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
 .info-box h2 {
@@ -1254,13 +1306,13 @@ label {
   margin-top: 1rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text);
 }
 
 input[type="number"] {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--box-border);
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
@@ -1306,12 +1358,12 @@ input[type="number"] {
 
 .resultado-detalhado {
   margin-top: 2rem;
-  background: #f8fafc;
+  background-color: var(--box-bg);
   padding: 1rem 1.5rem;
   border-radius: 10px;
   border: 1px solid #e2e8f0;
   font-size: 0.95rem;
-  color: #1a202c;
+  color: var(--text);
 }
 
 .resultado-detalhado h3 {
@@ -1360,7 +1412,7 @@ input[type="number"] {
 
 /* Botão com ícone simples */
 .credit-button {
-  background-color: #cfcfcf;
+  background-color: var(--box-bg);
   color: white;
   border-radius: 50%;
   width: 26px;
@@ -1374,13 +1426,13 @@ input[type="number"] {
 }
 
 .credit-button:hover {
-  background-color: #1a1a1a;
+  background-color: var(--box-bg);
 }
 
 /* Caixa de créditos (inicialmente escondida) */
 .credit-box {
-  background-color: #fafafa;
-  color: #000000;
+  background-color: var(--bg-soft);
+  color: var(--highlight);
   padding: 10px 14px;
   border-radius: 10px;
   margin-top: 8px;
@@ -1412,7 +1464,7 @@ input[type="number"] {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--box-bg);
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
