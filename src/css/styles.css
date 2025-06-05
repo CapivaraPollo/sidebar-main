@@ -668,7 +668,13 @@ main,
 }
 
 /* quotes */
-
+.exemplo-quote {
+  font-size: 20pt;
+  font-family: Calibri, sans-serif;
+  color: var(--text);
+  margin-top: 4px;
+  text-align: center; /* Alinha o texto da legenda */
+  }
 .caixa-quote {
   background-color: var(--box-bg);
   border-left: 5px solid var(--highlight);
@@ -803,7 +809,7 @@ main,
   border: 1px solid #990000;
   color: #7a0303;
   padding: 2px 6px;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 15px;
   margin-bottom: 8px;
   
@@ -819,10 +825,10 @@ main,
 
 .alert-tag2 {
   display: inline-block;
-  border: 1px solid #f5d000;
-  color: #d8b800;
+  border: 1px solid #f0b800;
+  color: #f0b800;
   padding: 2px 6px;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 15px;
   margin-bottom: 8px;
 }
