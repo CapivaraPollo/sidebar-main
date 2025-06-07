@@ -81,6 +81,7 @@ body {
   overflow: hidden; /* <- Previne que o conteúdo ultrapasse */
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: var(--text);
 }
 
 #user_infos span {
