@@ -108,7 +108,8 @@ body {
 
 .side-item:hover:not(.active),
 #logout_btn:hover {
-  background-color: #cfcfcf;
+  background-color: #a7a6a6;
+  
 }
 
 .side-item a {
