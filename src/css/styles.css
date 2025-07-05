@@ -323,6 +323,7 @@ main,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .manual-explicacao h1 {
   text-align: center;
   margin-bottom: 15px;
@@ -377,6 +378,19 @@ main,
   background-color: var(--highlight); /* hover um pouco mais escuro */
   transform: translateY(-2px);
   color: var(--box-border);
+}
+
+/* BOOSTING */
+.manual-boosting {
+ text-align: justify;
+  border: 1px solid var(--box-border);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--box-bg);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Abordagem */
