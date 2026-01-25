@@ -445,6 +445,57 @@ main,
   color: var(--text);
 }
 
+/* GUIA TABLET */
+
+.manual-tablet {
+  text-align: justify;
+  border: 1px solid var(--box-border);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--box-bg);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manual-tablet h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+.manual-tablet p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 10px; /* espaçamento maior entre parágrafos */
+}
+
+.manual-tb {
+  text-align: justify;
+  border: 1px solid var(--box-border);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--box-bg);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manual-tablet h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.manual-pcd p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 10px; /* espaçamento maior entre parágrafos */
+}
+
 /* subtítulos */
 
 .subtitulo {
@@ -533,7 +584,21 @@ main,
   gap: 10px;
 }
 
+.subtitulo-tablet {
+  font-size: 15pt; /* ou 0.75rem ou 12px, conforme preferir */
+  font-family: "Calibri", sans-serif;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #1d1d29;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /*-----*/
+
 
 .expansion-section {
   margin-top: 30px;
@@ -683,6 +748,18 @@ main,
   margin-right: 6px;
 }
 
+.imagens-tablet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.imagens-tablet img {
+  width: 100%;
+  
+}
+
+
 /* quotes */
 .exemplo-quote {
   font-size: 20pt;
@@ -778,7 +855,17 @@ main,
   font-size: 10pt;
   font-family: Consolas, monospace;
 }
-
+.caixa-quote-tablet {
+  background-color: var(--box-bg);
+  border-left: 5px solid #1d1d29;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  font-family: Calibri, sans-serif;
+  font-size: 11pt;
+  text-align: justify;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
 /* blocos de obs/alertas */
 
 .bloco-observacao {
